@@ -6,7 +6,7 @@
 }
 
 img{
-    max-width: 100%;
+    max-width: 100px;
 }
 
 .content{
@@ -22,13 +22,11 @@ img{
 .pokemon{
     margin: .5rem;
     padding: 1rem 1.5em;
-    background-color: #49d0b0;
-    color: white;
     border-radius: 1rem;
 }
 
 .pokemon .number{
-    color: #0000004b;
+    color: #ffffff79;
     text-align: right;
     display: block;
 }
@@ -36,6 +34,8 @@ img{
 .pokemon .name{
     font-weight: bold;
     font-size: 1.3em;
+    text-transform: capitalize;
+    color: #fff;
 }
 
 .pokemon .details{
@@ -45,20 +45,55 @@ img{
 
 .pokemon .types{
     list-style-type: none;
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
 }
 
 .pokemon .type{
-    background-color: rgba(255, 255, 255, 0.259);
-    margin-top: 1em;
-    padding: .4em;
+    background-color: rgba(255, 255, 255, 0.492);
+    margin-top: .5em;
+    padding: .4em .6em;
     text-align: center;
     border-radius: 10px;
-    font-size: .9em;
+    font-size: .7em;
 }
 
 .pokemon .details img{
     height: 80px;
     align-self: flex-end;
+}
+
+.normal {background-color: #A8A77A;}
+.fire {background-color: #EE8130;}
+.water {background-color: #6390F0;}
+.electric {background-color: #F7D02C;}
+.grass {background-color: #7AC74C;}
+.ice {background-color: #96D9D6;}
+.fighting {background-color: #C22E28;}
+.poison {background-color: #A33EA1;}
+.ground {background-color: #E2BF65;}
+.flying {background-color: #A98FF3;}
+.psychic {background-color: #F95587;}
+.bug {background-color: #A6B91A;}
+.rock {background-color: #B6A136;}
+.ghost {background-color: #735797;}
+.dragon {background-color: #6F35FC;}
+.dark {background-color: #705746;}
+.steel {background-color: #B7B7CE;}
+.fairy {background-color: #D685AD;}
+
+#load_more {
+    display: block;
+    margin: 1em auto;
+    color: white;
+    background-color: red;
+    padding: .5rem 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    font-family: monospace;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 
@@ -90,9 +125,5 @@ img{
     .content{
         max-width: 992px;
         margin: 0 auto;
-    }
-
-    .pokemons{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
