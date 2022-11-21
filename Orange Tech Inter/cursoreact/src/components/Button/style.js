@@ -3,12 +3,16 @@ import styled, { css } from "styled-components";
 export const ButtonContainer = styled.button`
     background-color: #565656;
     border-radius: 22px;
+    border: none;
     position: relative;
 
     color: #fff;
-    padding: 2px 12px;
+    padding: 6px 12px;
     min-width: 120px;
     width: 100%;
+
+    cursor: pointer;
+    
 
     ${({variant}) => variant !== "primary" && css`
 
