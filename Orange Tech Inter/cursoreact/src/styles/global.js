@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         --black: rgb(10, 10, 10);
         --gray: rgb(122, 134, 154);
         --white: rgb(255,255,255);
+        --pink: #e4105d;
     }
 
     *{margin: 0;padding: 0;box-sizing: border-box; font-family: 'Open Sans'}
