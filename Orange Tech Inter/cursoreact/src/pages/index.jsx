@@ -10,17 +10,24 @@ const Teste = () => {
         setName("");
     };
 
-    React.useEffect(() => {
-        console.log("renderizei");
+    // React.useEffect(() => {
+    //     console.log("renderizei");
 
-        return () => {
-            console.log("encerrei");
-        };
-    }, []);
+    //     return () => {
+    //         console.log("encerrei");
+    //     };
+    // }, []);
 
-    React.useEffect(() => {
-        console.log("alterei");
-    }, [name]);
+    // React.useEffect(() => {
+    //     console.log("alterei");
+    // }, [name]);
+
+    const calculo = React.useMemo(() => {
+        console.log('calculei');
+        return 10 * 120931128371927468197 / 3;
+    },[]);
+
+    console.log(calculo);
 
     return (
         <>
