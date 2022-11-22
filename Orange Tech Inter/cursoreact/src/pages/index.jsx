@@ -3,18 +3,30 @@ import React from "react";
 const Teste = () => {
     const [name, setName] = React.useState("Leonardo");
 
+    const handleChange = () => {
+        setName((prev) => (prev === "Leonardo" ? "Anthony" : "Leonardo"));
+    };
+    const handleErase = () => {
+        setName("");
+    };
+
+    React.useEffect(() => {
+        console.log("renderizei");
+
+        return () => {
+            console.log("encerrei");
+        };
+    }, []);
+
+    React.useEffect(() => {
+        console.log("alterei");
+    }, [name]);
+
     return (
         <>
             <p style={{ color: "white" }}>{name}</p>
-            <button
-                onClick={() =>
-                    setName((prev) =>
-                        prev === "Leonardo" ? "Anthony" : "Leonardo"
-                    )
-                }
-            >
-                Mudar
-            </button>
+            <button onClick={handleChange}>Mudar</button>
+            <button onClick={handleErase}>Apagar</button>
         </>
     );
 };
