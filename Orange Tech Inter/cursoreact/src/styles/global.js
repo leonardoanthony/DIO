@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root{
         --black: rgb(10, 10, 10);
-        --gray: rgb(122, 134, 154);
+        --gray: rgb(45, 45, 54);
         --white: rgb(255,255,255);
         --pink: #e4105d;
     }
