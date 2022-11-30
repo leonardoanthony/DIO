@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
 import {
@@ -12,6 +14,13 @@ import {
 } from "./styles";
 
 const Login = () => {
+
+    const navigate = useNavigate();
+
+    const handleSignIn = () => navigate('/feed');
+
+    const { control, handleSubmit, formState: { errors, isValid } } = useForm();
+
     return (
         <>
             <Header />
@@ -31,7 +40,7 @@ const Login = () => {
                             <Content>make the change!</Content>
                             <Input placeholder="E-mail" type="email"/>
                             <Input placeholder="Senha" type="password"/>
-                            <Button title="Entrar" variant="secondary" />
+                            <Button title="Entrar" variant="secondary" onClick={handleSignIn} />
                             <Row>
                                 <Content variant="yellow">Esqueci a senha!</Content>
                                 <Content variant="pink">Cadastre-se</Content>

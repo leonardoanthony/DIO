@@ -3,8 +3,16 @@ import Button from "../../components/Button";
 import Header from "../../components/Header";
 import { Container, Content, Title, W50 } from "./styles";
 import banner from "../../assets/banner.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
+    const handleGoToLogin = () => {
+        navigate('/login');
+    }
+
     return (
         <>
             <Header />
@@ -20,7 +28,7 @@ const Home = () => {
                         profissional, evoluindo em comunidade com os melhores
                         experts
                     </Content>
-                    <Button variant="secondary" title="Comece agora!" />
+                    <Button variant="secondary" title="Comece agora!" onClick={handleGoToLogin}/>
                 </W50>
                 <W50>
                     <img className="banner" src={banner} alt="" />
