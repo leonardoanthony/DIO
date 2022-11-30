@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 const Teste = () => {
     const [name, setName] = React.useState("Leonardo");
 
-    const handleChange = () => {
+    const handleChange = useCallback(() => {
+        console.log('nome:', name);
         setName((prev) => (prev === "Leonardo" ? "Anthony" : "Leonardo"));
-    };
+    }, [name]);
+
     const handleErase = () => {
         setName("");
     };
