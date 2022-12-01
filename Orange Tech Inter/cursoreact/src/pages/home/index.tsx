@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Header auth={false} />
             <Container>
                 <W50>
                     <Title variant="highlight">Implemente</Title>

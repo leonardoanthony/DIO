@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IContent, ITitle } from './types';
 
 export const Container = styled.main`
     padding: 120px 0;
@@ -6,7 +7,7 @@ export const Container = styled.main`
     margin: 0 auto;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h3<ITitle>`
     font-weight: bold;
     color: white;
     font-size: 2.5em;
@@ -14,7 +15,7 @@ export const Title = styled.h3`
     ${({variant}) => variant === "highlight" && `color: #e4105d;`}
 `;
 
-export const Content = styled.p`
+export const Content = styled.p<IContent>`
     margin: .4em 0;
     font-weight: lighter;
     line-height: 2em;

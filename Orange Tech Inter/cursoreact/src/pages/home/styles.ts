@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ITitle } from './types';
 
 export const Container = styled.main`
     padding: 120px 0;
@@ -10,7 +11,7 @@ export const Container = styled.main`
     justify-content: space-between;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h2<ITitle>`
     font-weight: bold;
     color: white;
     font-size: 2.5em;

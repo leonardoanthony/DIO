@@ -1,17 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
-import {
-    Column,
-    Container,
-    Content,
-    Form,
-    Input,
-    Title,
-    Row,
-} from "./styles";
+import {Column,Container,Content,Form,Input,Title,Row,} from "./styles";
 
 const Login = () => {
 
@@ -19,11 +11,11 @@ const Login = () => {
 
     const handleSignIn = () => navigate('/feed');
 
-    const { control, handleSubmit, formState: { errors, isValid } } = useForm();
+    // const { control, handleSubmit, formState: { errors, isValid } } = useForm();
 
     return (
         <>
-            <Header />
+            <Header auth={false} />
             <Container>
                 <Row>
                     <Column>

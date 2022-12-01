@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IColumn } from './types';
 
 export const Container = styled.main`
     padding: 100px 0;
@@ -9,11 +10,9 @@ export const Container = styled.main`
 export const Row = styled.div`
     display: flex;
     align-items: flex-start;
-    justify-content: ${({justify}) => justify};    
-    flex-direction: ${({direction}) => direction};
     gap: 2em;
 `;
-export const Column = styled.div`
+export const Column = styled.div<IColumn>`
     flex: ${({flex}) => flex};
 `;
 
@@ -21,6 +20,4 @@ export const Title = styled.h2`
     font-weight: bold;
     color: white;
     margin-bottom: 1em;
-
-    ${({variant}) => variant === "highlight" && `color: #e4105d;`}
 `;

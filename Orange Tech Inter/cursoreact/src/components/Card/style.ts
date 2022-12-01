@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { IColumn, IRow } from "./types";
 
-export const Row = styled.div`
+export const Row = styled.div<IRow>`
     display: flex;
     align-items: center;
     justify-content: ${({justify}) => justify};    
     flex-direction: ${({direction}) => direction};
     gap: 1em;
 `;
-export const Column = styled.div`
+export const Column = styled.div<IColumn>`
     flex: ${({flex}) => flex};
 `;
 

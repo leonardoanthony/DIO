@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { IProgress } from "./types";
 
-export const Progress = styled.div`
+export const Progress = styled.div<IProgress>`
 
     background-color: white;
     width: 200px;

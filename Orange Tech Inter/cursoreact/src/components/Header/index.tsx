@@ -2,8 +2,9 @@ import React from "react";
 import { Container, Input, Menu, Wrapper, Row, Col } from "./style";
 import logo from "../../assets/logo.png";
 import Button from "../Button";
+import { IHeader } from "./types";
 
-const Header = ({ auth }) => {
+const Header = ({ auth }: IHeader) => {
     return (
         <>
             <Wrapper>
