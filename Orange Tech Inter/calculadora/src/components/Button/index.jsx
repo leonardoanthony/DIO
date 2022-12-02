@@ -1,9 +1,10 @@
 import React from 'react'
 import { StyledButton } from './style'
 
-const Button = ({color, title, flex}) => {
+const Button = ({color, title, flex, action}) => {
+
   return (
-    <StyledButton color={color} flex={flex}>
+    <StyledButton color={color} flex={flex} onClick={() => {action(title)}}>
         {title}
     </StyledButton>
   )

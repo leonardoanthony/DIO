@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
     height: 70px;
     border-radius: 100%;
     border: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
     flex: ${({flex}) => flex};
     cursor: pointer;
 
