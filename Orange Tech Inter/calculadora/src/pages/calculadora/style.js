@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BoxCalculator = styled.div`
 
     width: 350px;
-    height: 550px;
+    height: 500px;
     border-radius: 20px;
 
     background-color: var(--black);

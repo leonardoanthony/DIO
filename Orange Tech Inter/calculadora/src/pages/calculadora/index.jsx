@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
+import TextArea from "../../components/TextArea";
 import { BoxCalculator, Row } from "./style";
 
 const Calculadora = () => {
@@ -9,7 +10,7 @@ const Calculadora = () => {
             <Container>
                 <BoxCalculator>
                     <Row>
-
+                        <TextArea />
                     </Row>
                     <Row>
                         <Button color="gray" title="0" />
