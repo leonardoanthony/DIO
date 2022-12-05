@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Box = styled.div`
     color: white;
     margin: 1em auto;
-    width: 500px;
+    width: 600px;
     border: 1px solid gray;
     height: 120px;
     border-radius: 1em;
@@ -15,7 +15,9 @@ export const Profile = styled.img`
     height: 80px;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+    width: 100%;
+`;
 
 export const User = styled.p`
     color: gray;
@@ -33,7 +35,7 @@ export const Remove = styled.p`
     align-self: center;
     color: #f44336;
     font-size: 2em;
-    margin-left: 40%;
+    margin-left: 20%;
     cursor: pointer;
 `;
 
@@ -43,6 +45,6 @@ export const Row = styled.div`
 `;
 
 export const Column = styled.div`
-
+    flex: ${({flex}) => flex};
 
 `;
