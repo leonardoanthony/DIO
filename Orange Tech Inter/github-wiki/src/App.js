@@ -1,8 +1,9 @@
 import React from 'react'
+import Wiki from './pages'
 
 const App = () => {
   return (
-    <div>App</div>
+      <Wiki />
   )
 }
 
