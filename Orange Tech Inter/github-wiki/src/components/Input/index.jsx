@@ -1,9 +1,9 @@
 import React from 'react'
 import { InputWrapper } from './style'
 
-const Input = () => {
+const Input = ({value, onChange}) => {
   return (
-    <InputWrapper placeholder='Pesquise'/>
+    <InputWrapper value={value} onChange={onChange} placeholder='Pesquise'/>
 
   )
 }

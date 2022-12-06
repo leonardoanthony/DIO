@@ -13,6 +13,7 @@ export const Box = styled.div`
 
 export const Profile = styled.img`
     height: 80px;
+    border-radius: 50%;
 `;
 
 export const Title = styled.h2`

@@ -4,35 +4,44 @@ import Button from "../components/Button";
 import Input from "../components/Input";
 import Repository from "../components/Repository";
 import { Container, Image } from "./style";
+import {api} from '../services/api'
 
 const Wiki = () => {
-    const [repos, setRepos] = React.useState([
-        {
-            name: "leonardoanthony",
-            repo_name: "DIO",
-            profile: "https://avatars.githubusercontent.com/u/67436042?v=4",
-        },
-        {
-            name: "thecodeholic",
-            repo_name: "php-developer-roadmap",
-            profile: "https://avatars.githubusercontent.com/u/4627922?v=4",
-        },
-        {
-            name: "nijige",
-            repo_name: "Forca-do-habito",
-            profile: "https://avatars.githubusercontent.com/u/64282544?v=4",
-        },
-    ]);
+
+    const handleSearch = async () => {
+        try {
+            const { data } = await api.get(search);
+            const already_exists = repos.find((repo) => repo.id === data.id);
+            if(!already_exists){
+                let obj = {
+                    id: data.id,
+                    name: data.owner.login,
+                    repo_name: data.name,
+                    profile: data.owner.avatar_url,
+                };
+                
+                setRepos([...repos, obj]);
+            }
+        } catch (error) {
+            alert('algo deu errado');
+        }
+    };
+
+    const handleDeleteRepo = (id) => {
+        let list = repos.filter((repo) => repo.id !== id);
+        setRepos(list);
+    }
+
+    const [search, setSearch] = React.useState('');
+    const [repos, setRepos] = React.useState([]);
 
     return (
         <>
             <Container>
                 <Image src={logo} />
-                <Input />
-                <Button />
-                {repos.map((repo) => {
-                    return <Repository repo={repo} />;
-                })}
+                <Input value={search} onChange={({target}) => setSearch(target.value)}/>
+                <Button onClick={handleSearch}/>
+                {repos.map((repo, i) =>  <Repository key={i} repo={repo} deleteRepo={handleDeleteRepo}/> )}
             </Container>
         </>
     );

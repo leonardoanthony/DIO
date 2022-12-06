@@ -1,9 +1,9 @@
 import React from 'react'
 import { ButtonWrapper } from './style'
 
-const Button = () => {
+const Button = ({onClick}) => {
   return (
-    <ButtonWrapper>Salvar</ButtonWrapper>
+    <ButtonWrapper onClick={onClick}>Salvar</ButtonWrapper>
   )
 }
 
