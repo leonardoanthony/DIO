@@ -7,6 +7,8 @@
    - [X] Subindo o seu Projeto Flutter no Github
 - [ ] Linguagem de Programação Dart 
    - [X] Fundamentos da linguagem Dart
+   - [X] Estruturas Condicionais e De Repetição em Dart
+   - [X] Dominando Funções em Dart
 - [ ] Navegação e Widgets em Flutter
 - [ ] Persistência de Dados com SQLite
 - [ ] Consumindo APIs com Flutter
